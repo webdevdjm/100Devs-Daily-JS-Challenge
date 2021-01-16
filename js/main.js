@@ -41,3 +41,42 @@ function addToList(name) {
 }
 
 addToList("Adam")
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Please create a function that takes in an array of numbers and returns a new array that only contains odd numbers. 
+
+// Review our last practice problem from last class if you need some ideas.
+
+function onlyOddNums(arr) {
+  let oddArr = []
+  for (let i=0; i < arr.length; i++) {
+    if(arr[i] % 2 != 0) {
+      oddArr.push(arr[i])
+    }
+  }
+  // NOT working ?? why
+  // arr.forEach(function(item) {
+  //   if(item % 2 === 0) {
+  //     console.log(item)
+  //     oddArr.push(arr[item])
+  //   }
+  // })
+  return oddArr
+}
+
+console.log(onlyOddNums([1,2,5,6,9,11,14,17,18,20]))
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Please create a function that takes in a number. Print all the numbers from 1 to that number in the console, but skip any number that when multiplied by three is divisible by 2.
+
+function weirdCounter(num) {
+  for(let i=1; i<=num; i++) {
+    if(!((i * 3) % 2 === 0)) {
+      console.log(i)
+    }
+    
+  }
+}
+
+weirdCounter(27)
